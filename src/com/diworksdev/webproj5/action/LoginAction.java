@@ -23,11 +23,11 @@ public class LoginAction extends ActionSupport implements SessionAware{
 		LoginDAO dao=new LoginDAO();
 
 		loginDTOList = dao.select(username, password);
-		if(this.username.equals(loginDTOList.get(0).getUsename()) && this.password.equals(loginDTOList.get(0).getPassword())){
-			session.put("loginDTOlist", "loginDTOList");
+		if(this.username.equals(loginDTOList.get(0).getUsername()) && this.password.equals(loginDTOList.get(0).getPassword())){
+			session.put("loginDTOList", loginDTOList);
 			ret = SUCCESS;
 		}else{
-			session.put("loginDTOList", "loginDTOList");
+			session.put("loginDTOList", loginDTOList);
 			ret = ERROR;
 		}
 		return ret;

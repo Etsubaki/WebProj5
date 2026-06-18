@@ -12,7 +12,7 @@ import com.diworksdev.webproj5.util.DBConnector;
 
 public class LoginDAO {
 
-	public String usename;
+	public String username;
 	public String password;
 
 	public List<LoginDTO>loginDTOList = new ArrayList<LoginDTO>();
